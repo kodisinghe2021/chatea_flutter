@@ -11,6 +11,6 @@ class UtilFunctions {
   }
 
   static void backToPage(BuildContext context) {
-    Navigator.pop(context);
+    Navigator.of(context).pop();
   }
 }

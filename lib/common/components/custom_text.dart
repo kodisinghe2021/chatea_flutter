@@ -7,3 +7,7 @@ Text textHeadType(String text) => Text(
       text,
       style: GoogleFonts.acme(fontSize: 20, color: kWhite),
     );
+Text textsimpleType(String text) => Text(
+      text,
+      style: GoogleFonts.acme(fontSize: 14, color: kWhite),
+    );
