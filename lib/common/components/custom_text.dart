@@ -11,3 +11,11 @@ Text textsimpleType(String text) => Text(
       text,
       style: GoogleFonts.acme(fontSize: 14, color: kWhite),
     );
+Text textTitle(String text) => Text(
+      text,
+      style: GoogleFonts.abel(fontSize: 20),
+    );
+Text textSubTitle(String text) => Text(
+      text,
+      style: GoogleFonts.abel(fontSize: 10),
+    );

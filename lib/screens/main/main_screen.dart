@@ -24,31 +24,33 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: IndexedStack(
-        index: _currentIndex,
-        children: _screens,
-      ),
-      bottomNavigationBar: GNav(
-        tabBackgroundColor: Colors.black.withOpacity(.7),
-        activeColor: kWhite,
-        color: kShadow,
-        duration: const Duration(milliseconds: 200),
-        padding: const EdgeInsets.fromLTRB(50, 10, 50, 15),
-        selectedIndex: _currentIndex,
-        onTabChange: (tappedIndex) => setState(() {
-          _currentIndex = tappedIndex;
-        }),
-        tabs: const [
-          GButton(
-            icon: LineIcons.home,
-            text: 'Home',
-          ),
-          GButton(
-            icon: LineIcons.rocketChat,
-            text: 'Chat',
-          ),
-        ],
+    return SafeArea(
+      child: Scaffold(
+        body: IndexedStack(
+          index: _currentIndex,
+          children: _screens,
+        ),
+        bottomNavigationBar: GNav(
+          tabBackgroundColor: Colors.black.withOpacity(.7),
+          activeColor: kWhite,
+          color: kShadow,
+          duration: const Duration(milliseconds: 200),
+          padding: const EdgeInsets.fromLTRB(50, 10, 50, 15),
+          selectedIndex: _currentIndex,
+          onTabChange: (tappedIndex) => setState(() {
+            _currentIndex = tappedIndex;
+          }),
+          tabs: const [
+            GButton(
+              icon: LineIcons.home,
+              text: 'Home',
+            ),
+            GButton(
+              icon: LineIcons.rocketChat,
+              text: 'Chat',
+            ),
+          ],
+        ),
       ),
     );
   }

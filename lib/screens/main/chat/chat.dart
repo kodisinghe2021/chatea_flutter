@@ -1,5 +1,6 @@
+import 'package:chatea_app/screens/widgets/chat_page_header.dart';
+import 'package:chatea_app/screens/widgets/conversation_card.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class Chat extends StatefulWidget {
   const Chat({super.key});
@@ -11,13 +12,24 @@ class Chat extends StatefulWidget {
 class _ChatState extends State<Chat> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text(
-          'CHAT',
-          style: GoogleFonts.abel(fontSize: 50),
+    return Column(
+      children: [
+        //^ col1
+        const ChatPageHeader(),
+        //^ col2
+        Expanded(
+          flex: 14,
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: ListView.separated(
+              physics: const BouncingScrollPhysics(),
+              itemBuilder: (context, index) => const ConvercationCard(),
+              separatorBuilder: (context, index) => const SizedBox(height: 10),
+              itemCount: 10,
+            ),
+          ),
         ),
-      ),
+      ],
     );
   }
 }
