@@ -1,25 +1,25 @@
 import 'package:chatea_app/constant.dart';
-import 'package:chatea_app/screens/main/chat/chat.dart';
-import 'package:chatea_app/screens/main/home/home.dart';
+import 'package:chatea_app/screens/main_screen/conversation/screens/conversation_screen.dart';
+import 'package:chatea_app/screens/main_screen/frined_list/screen/friend_list_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 
-class MainScreen extends StatefulWidget {
-  const MainScreen({super.key});
+class MainTabController extends StatefulWidget {
+  const MainTabController({super.key});
 
   @override
-  State<MainScreen> createState() => _MainScreenState();
+  State<MainTabController> createState() => _MainTabControllerState();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class _MainTabControllerState extends State<MainTabController> {
   // current screen index
   int _currentIndex = 0;
 
   //screens list
   final List<Widget> _screens = [
-    const Home(),
-    const Chat(),
+    const FriendListScreen(),
+    const ConversationScreen(),
   ];
 
   @override

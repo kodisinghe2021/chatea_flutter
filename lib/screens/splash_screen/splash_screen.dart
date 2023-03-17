@@ -1,6 +1,6 @@
 import 'package:chatea_app/constant.dart';
 import 'package:chatea_app/common/components/custom_text.dart';
-import 'package:chatea_app/screens/main/main_screen.dart';
+import 'package:chatea_app/screens/main_screen/main_tab_controller.dart';
 import 'package:chatea_app/utils/util_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
@@ -18,7 +18,7 @@ class _SplashSreenState extends State<SplashSreen> {
     Future.delayed(const Duration(seconds: 3), () {
       UtilFunctions.navigateTo(
         context,
-        const MainScreen(),
+        const MainTabController(),
       );
     });
     super.initState();

@@ -1,8 +1,8 @@
 import 'package:chatea_app/common/components/custom_text.dart';
 import 'package:flutter/material.dart';
 
-class ChatPageHeader extends StatelessWidget {
-  const ChatPageHeader({
+class ConversationPageHeader extends StatelessWidget {
+  const ConversationPageHeader({
     super.key,
   });
 

@@ -1,21 +1,21 @@
-import 'package:chatea_app/screens/widgets/chat_page_header.dart';
-import 'package:chatea_app/screens/widgets/conversation_card.dart';
+import 'package:chatea_app/screens/main_screen/conversation/widgets/conversation_card.dart';
+import 'package:chatea_app/screens/main_screen/conversation/widgets/conversation_header.dart';
 import 'package:flutter/material.dart';
 
-class Chat extends StatefulWidget {
-  const Chat({super.key});
+class ConversationScreen extends StatefulWidget {
+  const ConversationScreen({super.key});
 
   @override
-  State<Chat> createState() => _ChatState();
+  State<ConversationScreen> createState() => _ConversationScreenState();
 }
 
-class _ChatState extends State<Chat> {
+class _ConversationScreenState extends State<ConversationScreen> {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         //^ col1
-        const ChatPageHeader(),
+        const ConversationPageHeader(),
         //^ col2
         Expanded(
           flex: 14,
@@ -23,7 +23,7 @@ class _ChatState extends State<Chat> {
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: ListView.separated(
               physics: const BouncingScrollPhysics(),
-              itemBuilder: (context, index) => const ConvercationCard(),
+              itemBuilder: (context, index) => const ConversationCard(),
               separatorBuilder: (context, index) => const SizedBox(height: 10),
               itemCount: 10,
             ),
